@@ -16,14 +16,27 @@ body {
 }
 
 :root {
-  --color-silver: #E8E8E8;
-  --color-navy: #0F2040;
+  /* Paleta inspirada en la imagen de referencia */
+  --color-cream: #F5F2E8;
+  --color-gold: #D4AF37;
+  --color-dark-green: #2F4F2F;
+  --color-sage: #9CAF88;
   --color-white: #FFFFFF;
-  --color-black: #000000;
-  --color-gray: #F8F8F8;
+  --color-black: #2C2C2C;
+  --color-light-sage: #E8F0E3;
+  
+  /* Colores de compatibilidad */
+  --color-silver: #F5F2E8;
+  --color-navy: #2F4F2F;
+  --color-gray: #E8F0E3;
   
   --font-title: "Allura", cursive;
-  --font-text: "Raleway", sans-serif;
+  --font-text: "Cormorant", serif;
+}
+
+body {
+  background-color: var(--color-white);
+  color: var(--color-black);
 }
 
 section {
