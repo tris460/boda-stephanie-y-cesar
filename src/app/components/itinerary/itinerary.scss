@@ -1,5 +1,5 @@
 .itinerary-section {
-  background-color: var(--color-gray);
+  background-color: #d1dcee7b;
   padding: 60px 0;
   position: relative;
   overflow: hidden;
@@ -202,7 +202,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, var(--color-silver), #A0A0A0);
+  background: linear-gradient(to bottom, var(--color-silver), #dedede);
   transform: translateX(-50%);
 }
 
@@ -237,7 +237,7 @@
 .timeline-dot {
   width: 16px;
   height: 16px;
-  background: var(--color-silver);
+  background: #c3dbff;
   border: 3px solid var(--color-white);
   border-radius: 50%;
   margin: 0 20px;

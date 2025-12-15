@@ -1,5 +1,5 @@
 .rsvp-section {
-  background-color: #F8F8F8;
+  background-color: #c3dbff3f;
   padding: 60px 0;
 }
 
@@ -79,7 +79,7 @@
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--color-silver);
+  border-color: #c3dbff5c;
 }
 
 .form-group input[type="text"].error,
@@ -126,7 +126,7 @@
 }
 
 .radio-option input[type="radio"]:checked + .radio-custom .heart-icon {
-  filter: brightness(0) saturate(100%) invert(12%) sepia(45%) saturate(1234%) hue-rotate(202deg) brightness(95%) contrast(95%);
+  filter: brightness(0) saturate(100%) invert(35%) sepia(25%) saturate(1500%) hue-rotate(202deg) brightness(90%) contrast(90%);
 }
 
 .radio-group.error .heart-icon {
@@ -135,7 +135,7 @@
 
 .submit-btn {
   width: 100%;
-  background: var(--color-navy);
+  background: #456ca6;
   color: var(--color-white);
   border: none;
   padding: 15px 30px;

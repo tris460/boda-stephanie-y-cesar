@@ -1,59 +1,161 @@
-# WeddingBYE
+# 💒 Boda Stephanie & César
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.4.
+Sitio web de invitación digital para la boda de **Stephanie Capilla Rosas** y **César Heredia Pantaleón**.
 
-## Development server
+Una elegante invitación web que incluye todos los detalles importantes de la celebración: fecha, ubicación, código de vestimenta, mesa de regalos y más.
 
-To start a local development server, run:
+## 🌐 Sitio en Vivo
+
+**URL:** [https://tris460.github.io/boda-stephanie-y-cesar/](https://tris460.github.io/boda-stephanie-y-cesar/)
+
+## ✨ Características
+
+- 📱 **Diseño Responsivo** - Optimizado para móviles y desktop
+- 💝 **Mesa de Regalos** - Enlace directo a Liverpool
+- 📍 **Ubicación Interactiva** - Detalles del lugar de la ceremonia
+- ⏰ **Contador Regresivo** - Cuenta atrás hasta el gran día
+- 👗 **Código de Vestimenta** - Información sobre el atuendo
+- 📞 **Contacto Directo** - Número de teléfono para consultas
+- 🎵 **Música Ambiental** - Reproductor de música integrado
+
+## 🛠️ Tecnologías
+
+- **Angular 20** - Framework principal
+- **TypeScript** - Lenguaje de programación
+- **SCSS** - Estilos y diseño
+- **GitHub Pages** - Hosting y despliegue
+
+## 📋 Requisitos Previos
+
+Antes de comenzar, asegúrate de tener instalado:
+
+- [Node.js](https://nodejs.org/) (versión 18 o superior)
+- [npm](https://www.npmjs.com/) (incluido con Node.js)
+- [Angular CLI](https://angular.io/cli) (opcional, pero recomendado)
 
 ```bash
+npm install -g @angular/cli
+```
+
+## 🚀 Instalación y Desarrollo Local
+
+### 1. Clonar el repositorio
+
+```bash
+git clone https://github.com/tris460/boda-stephanie-y-cesar.git
+cd boda-stephanie-y-cesar
+```
+
+### 2. Instalar dependencias
+
+```bash
+npm install
+```
+
+### 3. Ejecutar servidor de desarrollo
+
+```bash
+npm start
+# o alternativamente
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+El sitio estará disponible en `http://localhost:4200/`
 
-## Code scaffolding
+## 📦 Scripts Disponibles
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+| Comando | Descripción |
+|---------|-------------|
+| `npm start` | Inicia el servidor de desarrollo |
+| `npm run build` | Construye el proyecto para producción |
+| `npm run deploy` | Construye y despliega a GitHub Pages |
+| `npm test` | Ejecuta las pruebas unitarias |
+| `npm run watch` | Construye en modo desarrollo con watch |
 
-```bash
-ng generate component component-name
-```
+## 🚀 Despliegue
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+### Despliegue Automático a GitHub Pages
 
 ```bash
-ng build
+npm run deploy
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Este comando:
+1. Construye el proyecto en modo producción
+2. Configura el `base-href` correcto
+3. Despliega automáticamente a GitHub Pages
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### Despliegue Manual
 
 ```bash
-ng test
+# 1. Construir para producción
+npm run build
+
+# 2. Los archivos estarán en dist/wedding-b-y-e/
+# Puedes subir estos archivos a cualquier servidor web
 ```
 
-## Running end-to-end tests
+## 📁 Estructura del Proyecto
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
+```
+src/
+├── app/
+│   ├── components/          # Componentes de la aplicación
+│   │   ├── details/         # Sección de detalles de la boda
+│   │   ├── location/        # Información de ubicación
+│   │   ├── dress-code/      # Código de vestimenta
+│   │   ├── registry/        # Mesa de regalos
+│   │   ├── contact/         # Información de contacto
+│   │   └── footer/          # Pie de página
+│   ├── services/            # Servicios (traducción, etc.)
+│   └── pipes/               # Pipes personalizados
+├── styles.scss              # Estilos globales
+└── assets/                  # Recursos estáticos
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 🎨 Personalización
 
-## Additional Resources
+### Colores y Estilos
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Los colores principales están definidos en `src/styles.scss`:
+
+```scss
+:root {
+  --color-white: #ffffff;
+  --color-silver: #f8f8f8;
+  --color-navy: #0f2040;
+  --color-black: #333333;
+  --font-title: 'Playfair Display', serif;
+  --font-text: 'Source Sans Pro', sans-serif;
+}
+```
+
+### Contenido
+
+Para modificar el contenido, edita los archivos HTML en cada componente:
+- `src/app/components/details/details.html` - Detalles de la boda
+- `src/app/components/location/location.html` - Ubicación
+- `src/app/components/registry/registry.html` - Mesa de regalos
+
+## 📱 Compatibilidad
+
+- ✅ Chrome (últimas 2 versiones)
+- ✅ Firefox (últimas 2 versiones)
+- ✅ Safari (últimas 2 versiones)
+- ✅ Edge (últimas 2 versiones)
+- ✅ Dispositivos móviles iOS y Android
+
+## 👥 Desarrollado por
+
+**Beatriz Martínez Pérez**
+- 📧 Email: trism460@gmail.com
+- 📱 WhatsApp: +52 449 183 9173
+- 📘 Facebook: [BettyMtzPerez](https://www.facebook.com/BettyMtzPerez/)
+
+## 📄 Licencia
+
+Este proyecto es privado y está desarrollado específicamente para la boda de Stephanie y César.
+
+---
+
+💕 **¡Nos vemos en la boda!** 💕

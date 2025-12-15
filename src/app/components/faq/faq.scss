@@ -1,13 +1,13 @@
 .faq {
   position: relative;
-  background-color: var(--color-silver);
+  background-color: #c3dbff89;
   padding: 35px 20px;
   text-align: center;
 }
 
 .wave-bottom {
   position: absolute;
-  bottom: -50px;
+  bottom: -60px;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -20,7 +20,7 @@
   display: block;
   width: calc(100% + 1.3px);
   height: 60px;
-  fill: var(--color-silver);
+  fill: #c3dbff5c;
 }
 
 .faq h2 {
