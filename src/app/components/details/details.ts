@@ -11,7 +11,7 @@ export class Details implements AfterViewInit {
   isPlaying = false;
   private audio: HTMLAudioElement;
   countdown = { days: 0, hours: 0, minutes: 0, seconds: 0 };
-  private weddingDate = new Date('2026-10-17T19:00:00');
+  private weddingDate = new Date('2026-03-28T18:00:00');
 
   constructor() {
     this.audio = new Audio('Sweet Child O Mine.mp3');

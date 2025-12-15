@@ -1,60 +1,36 @@
 <section id="registry" class="registry-section">
-    <h2 class="registry-title">{{ 'gifts.title' | translate }}</h2>
+    <h2 class="registry-title">Mesa de regalos</h2>
     
     <div class="message-section">
       <p class="welcome-message">
-        {{ 'gifts.description' | translate}}
+        Si deseas contribuir a nuestro futuro juntos, hemos preparado estas opciones para ti.
       </p>
       <p class="gratitude-message">
-        {{ 'gifts.note' | translate }}
+        ¡Cualquier aporte será recibido con mucho amor y gratitud!
       </p>
     </div>
 
-    <div class="tabs-container">
-      <div class="card-navigation">
-        <button class="nav-arrow left" (click)="previousTab()">
-          &#8249;
-        </button>
-        
-        <div class="card-info" [class.transitioning]="isTransitioning">
-          <div class="bank-section">
-            <img [src]="cards[activeTab].bankImage" [alt]="cards[activeTab].bankName" class="bank-logo">
-            <h3>{{ 'gifts.bank.title' | translate }}</h3>
-          </div>
-          
-          <div class="card-details">
-            <div class="detail-item">
-              <span class="label">{{ 'gifts.bank.name' | translate }}</span>
-              <div class="value-container">
-                <span class="value">{{ cards[activeTab].holder }}</span>
-                <button class="copy-btn" (click)="copyToClipboard(cards[activeTab].holder)">
-                  <img src="copy.png" alt="Copiar" class="copy-icon">
-                </button>
-              </div>
-            </div>
-            <div class="detail-item">
-              <span class="label">{{ 'gifts.bank.number' | translate }}</span>
-              <div class="value-container">
-                <span class="value card-number">{{ cards[activeTab].number }}</span>
-                <button class="copy-btn" (click)="copyToClipboard(cards[activeTab].number)">
-                  <img src="copy.png" alt="Copiar" class="copy-icon">
-                </button>
-              </div>
-            </div>
-          </div>
+    <div class="gift-options">
+      <a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51888514" 
+         target="_blank" 
+         class="gift-option liverpool-option">
+        <div class="option-content">
+          <h3>Mesa de regalos Liverpool</h3>
+          <p>Visita nuestra lista de regalos en Liverpool</p>
         </div>
-        
-        <button class="nav-arrow right" (click)="nextTab()">
-          &#8250;
-        </button>
+        <div class="option-arrow">→</div>
+      </a>
+      
+      <div class="gift-option envelope-option">
+        <div class="option-content">
+          <h3>Lluvia de sobres</h3>
+          <p>Tu presencia es nuestro mejor regalo</p>
+        </div>
+        <div class="option-icon">💌</div>
       </div>
     </div>
 
     <div class="thank-you">
-      <p>{{ 'gifts.thanks' | translate }}</p>
-    </div>
-    
-    <div class="copy-toast" [class.show]="showCopyMessage">
-      {{ 'gifts.copy' | translate }}
+      <p>¡Gracias por ser parte de nuestro día especial!</p>
     </div>
 </section>

@@ -30,65 +30,61 @@
 .contact-content {
   display: flex;
   justify-content: center;
-  gap: 80px;
-  max-width: 700px;
+  max-width: 400px;
   margin: 0 auto 40px auto;
 }
 
-.contact-person {
+.single-contact {
+  width: 100%;
+}
+
+.phone-container {
   background: var(--color-silver);
-  padding: 30px 25px;
+  padding: 40px 30px;
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  min-width: 200px;
-  opacity: 0;
-  transform: translateY(50px) scale(0.9);
-  transition: all 0.8s ease-out;
-}
-
-.contact-person.loaded {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-
-.contact-icon {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 15px;
-  opacity: 0.8;
-}
-
-.contact-person h3 {
-  font-family: var(--font-title);
-  color: var(--color-navy);
-  font-size: 1.8rem;
-  margin: 0 0 15px 0;
-  font-weight: 600;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  
+  h3 {
+    font-family: var(--font-title);
+    color: var(--color-navy);
+    font-size: 1.6rem;
+    margin: 0 0 25px 0;
+    font-weight: 500;
+  }
 }
 
 .phone-number {
   font-family: var(--font-text);
-  color: var(--color-black);
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin: 0 0 10px 0;
+  color: var(--color-navy);
+  font-size: 2rem;
+  font-weight: 600;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  display: block;
+  letter-spacing: 1px;
 }
 
 .phone-number:hover {
-  color: var(--color-navy);
-  text-decoration: underline;
+  color: var(--color-black);
+  transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
   .contact-content {
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
+    max-width: 100%;
+    padding: 0 10px;
   }
   
-  .contact-person {
-    min-width: 250px;
+  .phone-container {
+    padding: 30px 20px;
+    
+    h3 {
+      font-size: 1.4rem;
+    }
+  }
+  
+  .phone-number {
+    font-size: 1.6rem;
   }
 }

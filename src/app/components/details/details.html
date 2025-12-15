@@ -7,47 +7,39 @@
     </svg>
   </div>
   
-  <div class="music-player">
-    <button class="play-button" [class.playing]="isPlaying" (click)="toggleMusic()">
-      <span class="play-icon">
-        {{ isPlaying ? '||' : '▶' }}
-      </span>
-    </button>
-    <span class="music-label">{{ 'details.our-song' | translate }}</span>
-  </div>
-  
   <div class="details-content">
-    <h2>{{ 'home.title' | translate }}</h2>
-    <p class="invitation-text">{{ 'details.description' | translate}}</p>
+    <div class="couple-names">
+      <h1>Stephanie Capilla Rosas</h1>
+      <span class="ampersand">&</span>
+      <h1>Cesar Heredia Pantaleón</h1>
+    </div>
+    <h2>¡Nos casamos!</h2>
+    <p class="invitation-text">Con gran alegría queremos compartir contigo este momento tan especial</p>
     
     <div class="wedding-date">
-      <h3>{{ 'details.date' | translate }}</h3>
-      <p class="wedding-time">7:00 PM</p>
+      <h3>28 de Marzo de 2026</h3>
+      <p class="wedding-time">6:00 PM</p>
     </div>
     
     <div class="countdown">
       <div class="countdown-item">
         <span class="countdown-number">{{ countdown.days }}</span>
-        <span class="countdown-label">{{ 'details.days' | translate }}</span>
+        <span class="countdown-label">Días</span>
       </div>
       <div class="countdown-item">
         <span class="countdown-number">{{ countdown.hours }}</span>
-        <span class="countdown-label">{{ 'details.time' | translate }}</span>
+        <span class="countdown-label">Horas</span>
       </div>
       <div class="countdown-item">
         <span class="countdown-number">{{ countdown.minutes }}</span>
-        <span class="countdown-label">{{ 'details.minutes' | translate }}</span>
+        <span class="countdown-label">Minutos</span>
       </div>
       <div class="countdown-item">
         <span class="countdown-number">{{ countdown.seconds }}</span>
-        <span class="countdown-label">{{ 'details.seconds' | translate }}</span>
+        <span class="countdown-label">Segundos</span>
       </div>
     </div>
     
-    <p class="save-date">{{ 'details.text' | translate }}</p>
-  </div>
-  
-  <div class="rings-section">
-    <img src="rings.jpeg" alt="Anillos de boda" class="rings-image" loading="lazy">
+    <p class="save-date">¡Reserva la fecha y acompáñanos en este día tan especial!</p>
   </div>
 </section>
