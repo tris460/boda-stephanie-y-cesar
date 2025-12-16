@@ -14,7 +14,6 @@ export class Rsvp {
   formData = {
     name: '',
     attending: null as string | null,
-    guests: null as string | null,
     message: ''
   };
   
@@ -28,9 +27,8 @@ export class Rsvp {
     // Validar campos requeridos
     const isNameValid = this.formData.name && this.formData.name.trim() !== '';
     const isAttendingValid = this.formData.attending !== null;
-    const isGuestsValid = this.formData.attending !== 'true' || !!this.formData.guests;
 
-    if (isNameValid && isAttendingValid && isGuestsValid) {
+    if (isNameValid && isAttendingValid) {
       this.sendToGoogleSheets();
     }
   }
@@ -43,15 +41,12 @@ export class Rsvp {
     return this.showErrors && this.formData.attending === null;
   }
   
-  isGuestsInvalid(): boolean {
-    return this.showErrors && this.formData.attending === 'true' && !this.formData.guests;
-  }
+
   
   resetForm(): void {
     this.formData = {
       name: '',
       attending: null,
-      guests: null,
       message: ''
     };
     this.showErrors = false;
@@ -61,20 +56,18 @@ export class Rsvp {
   isFormValid(): boolean {
     const isNameValid = !!(this.formData.name && this.formData.name.trim() !== '');
     const isAttendingValid = this.formData.attending !== null;
-    const isGuestsValid = this.formData.attending !== 'true' || !!this.formData.guests;
     
-    return isNameValid && isAttendingValid && isGuestsValid;
+    return isNameValid && isAttendingValid;
   }
   
   sendToGoogleSheets(): void {
     this.isLoading = true;
     
-    const baseUrl = 'https://script.google.com/macros/s/AKfycbz256hgQax49klnR76Df_DebefOqvU5Epjxq-bbVTa7HeI07TiRl4iPU9mJ4RpzMxrLOg/exec';
+    const baseUrl = 'https://script.google.com/macros/s/AKfycbxaKSi4pxC0lEPUZGczTlrG4lyEeR1Kdl3iWzmdVHGoTkAkkx3uDVAYw8vLrHV6VgbBBw/exec';
     
     const params = new URLSearchParams({
       nombre: this.formData.name,
       asistencia: this.formData.attending === 'true' ? 'Sí' : 'No',
-      invitados: this.formData.attending === 'true' ? this.formData.guests || '1' : '0',
       mensaje: this.formData.message || 'Sin mensaje',
       fecha: new Date().toLocaleString('es-MX')
     });

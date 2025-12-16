@@ -38,11 +38,58 @@
 
 .music-player {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 15px;
-  padding: 20px;
-  background: transparent;
+  padding: 30px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  margin: 30px auto;
+  max-width: 400px;
+  box-shadow: 0 8px 25px rgba(47, 79, 47, 0.1);
+  border: 2px solid var(--color-gold);
+  backdrop-filter: blur(10px);
+  
+  h3 {
+    font-family: var(--font-text);
+    color: var(--color-dark-green);
+    font-size: 1.2rem;
+    margin: 0 0 15px 0;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  audio {
+    width: 100%;
+    max-width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    outline: none;
+    
+    &::-webkit-media-controls-panel {
+      background-color: var(--color-sage);
+      border-radius: 20px;
+    }
+    
+    &::-webkit-media-controls-play-button,
+    &::-webkit-media-controls-pause-button {
+      background-color: var(--color-gold);
+      border-radius: 50%;
+    }
+    
+    &::-webkit-media-controls-timeline {
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+    }
+    
+    &::-webkit-media-controls-current-time-display,
+    &::-webkit-media-controls-time-remaining-display {
+      color: var(--color-navy);
+      font-family: var(--font-text);
+      font-size: 0.8rem;
+    }
+  }
 }
 
 .play-button {
